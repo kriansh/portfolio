@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Kriansh Pokharel{% endblock %}
+
+{% block content %}
+<section class="projects-hero">
+    <div class="projects-header">
+        <h1>My Projects</h1>
+        <p>Here are some of the projects I've worked on</p>
+    </div>
+
+    <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ url_for('static', filename='images/p1-logo.png') }}" alt="Netra">
+            </div>
+            <div class="project-content">
+                <h3>Netra</h3>
+                <p class="project-description">
+                    This was a project that helps blind people to view the world. It helps people to see the world by using AI in Nepali as well as English language. There are many features in this project which are mentioned in the github repository.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">AI</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/kriansh/netra" class="project-link github" target="_blank">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ url_for('static', filename='images/thrift.webp') }}" alt="Thrift Store">
+            </div>
+            <div class="project-content">
+                <h3>Thrift Store</h3>
+                <p class="project-description">
+                    A thrift store is a store that sells used items at a lower price. This project is a thrift store where you can buy and sell items. This project is made using Wordpress.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">WordPress</span>
+                    <span class="tech-tag">WooCommerce</span>
+                    <span class="tech-tag">PHP</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/kriansh/thrift" class="project-link github" target="_blank">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ url_for('static', filename='images/autotube.webp') }}" alt="Content Machine">
+            </div>
+            <div class="project-content">
+                <h3>Content Machine</h3>
+                <p class="project-description">
+                    This is a project that helps you to automatically generate content for your youtube channel and upload it. This project is made using python. Flask and other technologies were used to make this project more efficient and user friendly.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">YouTube API</span>
+                    <span class="tech-tag">Automation</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/kriansh/AutoTube" class="project-link github" target="_blank">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

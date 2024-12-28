@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Kriansh - Portfolio{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favico.webp') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-wrapper">
+            <a href="{{ url_for('index') }}" class="logo">Kriansh</a>
+            <div class="theme-toggle">
+                <div class="toggle-track">
+                    <div class="toggle-sun">☀️</div>
+                    <div class="toggle-moon">🌙</div>
+                </div>
+                <div class="toggle-thumb"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://np.linkedin.com/in/kriansh-pokharel-05baa133a" target="_blank">LinkedIn</a>
+                <a href="https://github.com/kriansh" target="_blank">GitHub</a>
+                <a href="https://x.com/iophop9" target="_blank">Twitter</a>
+            </div>
+            <p>&copy; {{ year }} Kriansh Pokharel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+            
+            // Check for saved theme
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            body.classList.add(currentTheme);
+            if (currentTheme === 'light') {
+                toggle.classList.add('active');
+            }
+            
+            // Toggle theme
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('active');
+                if (body.classList.contains('dark')) {
+                    body.classList.replace('dark', 'light');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    body.classList.replace('light', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

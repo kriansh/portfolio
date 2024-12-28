@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-background-container">
+        <div class="hero-background"></div>
+    </div>
+    <div class="hero-content">
+        <div class="glass-plate">
+            <h1>Hello, I'm Kriansh</h1>
+            <h2>Developer & Designer</h2>
+            <a href="{{ url_for('contact') }}" class="cta-button">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+<section class="featured-work">
+    <h2>Featured Work</h2>
+    <div class="work-grid">
+        <div class="work-item">
+            <img src="{{ url_for('static', filename='images/p1-logo.png') }}" alt="Project 1">
+            <h3>Netra</h3>
+            <p>This was a project that helps blind people to view the world. It helps people to see the world by using AI in Nepali as well as English language.There are many features in this project which are mentioned in the github repository. </p>
+            <a href="https://github.com/kriansh/netra" target="_blank" class="btn">
+                <i class="fab fa-github"></i>
+                View Project
+            </a>
+        </div>
+        <div class="work-item">
+            <img src="{{ url_for('static', filename='images/thrift.webp') }}" alt="Project 2">
+            <h3>Thrift Store</h3>
+            <p>A thrift store is a store that sells used items at a lower price. This project is a thrift store where you can buy and sell items. This project is made using Wordpress.</p>
+            <a href="https://github.com/kriansh/thrift" target="_blank" class="btn">
+                <i class="fab fa-github"></i>
+                View Project
+            </a>
+        </div>
+        <div class="work-item">
+            <img src="{{ url_for('static', filename='images/autotube.webp') }}" alt="Project 3">
+            <h3>Content Machine</h3>
+            <p>This is a project that helps you to automatically generate content for your youtube channel and upload it. This project is made using python.Flask and other technologies were used to make this project more efficient and user friendly.</p>
+            <a href="https://github.com/kriansh/AutoTube" target="_blank" class="btn">
+                <i class="fab fa-github"></i>
+                View Project
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %} 

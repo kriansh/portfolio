@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+<section class="admin-panel">
+    <div class="admin-header">
+        <h1>Messages</h1>
+        <a href="{{ url_for('admin_logout') }}" class="logout-btn">Logout</a>
+    </div>
+    
+    <div class="messages-container">
+        {% for message in messages %}
+        <div class="message-card">
+            <div class="message-header">
+                <h3>{{ message.subject }}</h3>
+                <span class="date">{{ message.date.strftime('%Y-%m-%d %H:%M') }}</span>
+            </div>
+            <div class="message-info">
+                <p><strong>From:</strong> {{ message.name }} ({{ message.email }})</p>
+            </div>
+            <div class="message-content">
+                <p>{{ message.message }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %} 

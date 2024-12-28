@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}About - Kriansh Pokharel{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="about-content">
+        <img src="{{ url_for('static', filename='images/profile-placeholder.jpg') }}" alt="Kriansh Pokharel" class="profile-image">
+        <h1>About Me</h1>
+        <p class="bio">
+            I'm a passionate developer and designer focused on creating beautiful and functional 
+            digital experiences. Feel free to reach out to me at +977 9764359618 for any inquiries 
+            or collaboration opportunities.
+        </p>
+    </div>
+</section>
+
+<section class="skills">
+    <h2>Skills & Expertise</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Development</h3>
+            <ul>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Bash Scripting</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Design</h3>
+            <ul>
+                <li>UI/UX Design</li>
+                <li>Figma</li>
+                <li>System Design</li>
+                <li>Prototyping</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %} 
